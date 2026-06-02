@@ -49,23 +49,16 @@ public class DemoArrayList08 {
             System.out.println(cust.toString());
         }
 
-        // Langkah 11: addAll()
-        ArrayList<Customer08> newCustomers = new ArrayList<>();
-        newCustomers.add(new Customer08(201, "Della"));
-        newCustomers.add(new Customer08(202, "Victor"));
-        newCustomers.add(new Customer08(203, "Sarah"));
+       // Sorting String/primitive
+ArrayList<String> daftarSiswa = new ArrayList<>();
+daftarSiswa.add("Zainab");
+daftarSiswa.add("Andi");
+daftarSiswa.add("Rara");
+Collections.sort(daftarSiswa);
+System.out.println(daftarSiswa);
 
-        customers.addAll(newCustomers);
-
-        for (Customer08 cust : customers) {
-            System.out.println(cust.toString());
-        }
-
-        // Langkah 12: Print langsung
-        System.out.println(customers);
-
-        // Langkah 13.6: Sorting by name
-        customers.sort((c1, c2) -> c1.name.compareTo(c2.name));
-        System.out.println(customers);
+// Sorting object berdasarkan name
+customers.sort((c1, c2) -> c1.name.compareTo(c2.name));
+System.out.println(customers);
     }
 }
